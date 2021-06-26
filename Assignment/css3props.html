@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            background: grey;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px rgb(231, 91, 114);
+            text-align: center;
+            line-height: 200px;
+            color: white;
+            font-size: 30px;
+            text-shadow: 10px 10px 10px pink;
+            /*top left spreadness color*/
+            float: left;
+        }
+        
+        .box1 {
+            height: 200px;
+            width: 200px;
+            background: grey;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px rgb(231, 91, 114);
+            float: left;
+        }
+        
+        .box2 {
+            height: 200px;
+            width: 200px;
+            background: grey;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px rgb(231, 91, 114);
+            text-align: center;
+            line-height: 200px;
+            color: white;
+            font-size: 30px;
+            text-shadow: 10px 10px 10px pink;
+            /*top left spreadness color*/
+            float: left;
+            animation-name: web;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes web {
+            from {
+                background: grey;
+                colr: white;
+            }
+            to {
+                background: pink;
+                color: black;
+            }
+        }
+        
+        .box3 {
+            height: 200px;
+            width: 200px;
+            float: left;
+            border: solid 1px red;
+        }
+        
+        #rotate {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">CSS3</div>
+    <div class="box1"></div>
+    <div class="box2">Animation</div>
+    <div class="box3">Rotate<img src="lhasa.jpg" id="rotate" height="190" width="200"></div>
+    <div class="box3">Scale<img src="lhasa.jpg" id="scale" width="200" height="190"></div>
+</body>
+
+</html>

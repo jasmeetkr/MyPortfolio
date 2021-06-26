@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #form {
+            height: 400px;
+            width: 400px;
+            background: rgb(243, 228, 207);
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="form">
+        <label>Name</label><br>
+        <input type="text" id="name"><br>
+        <label>Contact</label><br>
+        <input type="text" id="contact"><br>
+        <label>Message</label><br>
+        <textarea cols="30" rows="12" id="message"></textarea><br>
+        <input type="button" value="submit" onclick="validate">
+
+        <script>
+            function validate() {
+                var name = document.getElementById("name").value;
+                var contact = document.getElementById("contact").value;
+                var msg = document.getElementById("message").value;
+
+                if (name == "") {
+                    alert("Please enter name!");
+                    document.getElementById("name").focus();
+                } else if (contact == "") {
+                    alert("Please enter valid contact number!");
+                    document.getElementById("contact").focus();
+                } else if (msg == "") {
+                    alert("Please enter message!");
+                    document.getElementById("message").focus();
+                } else {
+                    document.getElementById("nameval").innerHTML = name;
+                    document.getElementById("contactval").innerHTML = contact;
+                    document.getElementById("msgval").innerHTML = message;
+                }
+            }
+        </script>
+        <p id="nameval"></p>
+        <p id="contactval"></p>
+        <p id="msgval"></p>
+    </div>
+
+
+</body>
+
+</html>

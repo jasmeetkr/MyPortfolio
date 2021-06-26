@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body><label>Enter a digit/character to recognise ascii value</label>
+    <input type="text" onkeypress="tt(event)"><br>
+    <script>
+        function tt(event) {
+            var a = event.which;
+            alert(a)
+        }
+    </script>
+    <p>ternary operator</p>
+    <p id="output"></p>
+    <script>
+        var age = 15;
+        document.getElementById("output").innerHTML = age > 18 ? "Eligible" : "Not Eligible";
+    </script>
+
+    <style>
+        #error {
+            color: red;
+            display: none;
+            float: left;
+        }
+    </style>
+    <p>textbox to accept only digit[0-9]</p>
+    <p id="error">Please enter only digit</p>
+    <input type="text" onkeypress="return tt1(event)"><br>
+    <script>
+        function tt1(event) {
+            var a = event.which;
+            range = (a > 47 && a < 58);
+            document.getElementById("error").style.display = range ? "none" : "block";
+            return range;
+        }
+    </script>
+</body>
+
+
+
+</html>

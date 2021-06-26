@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        canvas {
+            border: solid 1px red;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="200" height="200" id="rect"></canvas>
+    <script>
+        var a = document.getElementById("rect");
+        var b = a.getContext("2d");
+        b.rect(20, 20, 150, 150) //leftspace,topspace, width,height
+        b.lineWidth = "15";
+        b.strokeStyle = "green";
+        b.stroke()
+    </script>
+    <canvas width="200" height="200" id="line"></canvas>
+    <script>
+        var a = document.getElementById("line");
+        var b = a.getContext("2d");
+
+        //first line
+        b.beginPath()
+        b.moveTo(0, 0); //x1,y1 -source
+        b.lineTo(200, 200); //x2,y2 -destination
+        b.lineWidth = "10";
+        b.strokeStyle = "red";
+        b.stroke()
+
+        //second line
+        b.beginPath()
+        b.moveTo(200, 0); //x1,y1 -source
+        b.lineTo(0, 200); //x2,y2 -destination
+        b.lineWidth = "10";
+        b.strokeStyle = "red";
+        b.stroke()
+    </script>
+</body>
+
+</html>
